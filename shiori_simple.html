@@ -64,13 +64,17 @@ h3 { color: #C9A96E; font-size: 1rem; font-weight: 600; margin-bottom: 8px; lett
 .route-item:last-child { border-bottom: none; }
 .route-time { background: #1E2761; color: #FAF8F5; padding: 4px 12px; font-weight: 600; font-size: 0.85rem; min-width: 56px; text-align: center; letter-spacing: 0.05em; }
 .route-time.drive { background: #C9A96E; }
+.route-time.car-return { background: #8B7355; color: #FAF8F5; }
 .route-place { font-weight: 700; font-size: 1rem; color: #1E2761; flex: 1; }
 .route-place.drive-text { color: #C9A96E; font-weight: 600; }
+.route-place.return-text { color: #8B7355; font-weight: 700; }
 .route-note { font-size: 0.8rem; color: #C9A96E; font-weight: 600; white-space: nowrap; }
 
 /* Boxes */
 .car-box { background: #F0EBE3; padding: 20px; margin: 12px 0; border-left: 4px solid #C9A96E; }
+.car-box.return-box { border-left: 4px solid #8B7355; background: #F5F0E8; }
 .car-name { font-size: 1rem; font-weight: 700; color: #C9A96E; margin-bottom: 8px; }
+.car-name.return { color: #8B7355; }
 .car-route { font-size: 0.95rem; font-weight: 600; color: #1E2761; margin-bottom: 10px; }
 .detail-item { padding: 4px 0; padding-left: 16px; position: relative; font-size: 0.9rem; color: #5A5A5A; }
 .detail-item::before { content: '—'; position: absolute; left: 0; color: #C9A96E; font-weight: 700; }
@@ -86,6 +90,8 @@ h3 { color: #C9A96E; font-size: 1rem; font-weight: 600; margin-bottom: 8px; lett
 /* Cards */
 .card { background: #FAF8F5; padding: 16px; margin: 10px 0; border-left: 3px solid #C9A96E; border-bottom: 1px solid #F0EBE3; }
 .card.featured { border-left: 3px solid #1E2761; background: #F0EBE3; }
+.card.drive-note { border-left: 3px solid #C9A96E; background: #FDF9F3; }
+.card.buffer-box { border-left: 3px solid #7BAE7F; background: #F5FAF5; }
 .rec-badge { display: inline-block; background: #C9A96E; color: #FAF8F5; font-size: 0.65rem; padding: 2px 8px; font-weight: 700; margin-left: 8px; vertical-align: middle; letter-spacing: 0.1em; }
 .card-name { font-weight: 700; font-size: 0.95rem; color: #1E2761; margin-bottom: 4px; }
 .card-price { color: #C9A96E; font-weight: 600; font-size: 0.9rem; }
@@ -206,13 +212,13 @@ h3 { color: #C9A96E; font-size: 1rem; font-weight: 600; margin-bottom: 8px; lett
 
 <!-- 2: 旅のルート -->
 <div class="slide">
-    <span class="slide-number">02 / 16</span>
+    <span class="slide-number">02 / 17</span>
     <h2>旅のルート</h2>
     <div class="route-timeline">
         <div class="route-item">
             <span class="route-time">12:00</span>
             <span class="route-place">東武日光駅 着</span>
-            <span class="route-note">レンタカー受取</span>
+            <span class="route-note">トヨタレンタカー受取</span>
         </div>
         <div class="route-item">
             <span class="route-time drive">🚗</span>
@@ -225,28 +231,28 @@ h3 { color: #C9A96E; font-size: 1rem; font-weight: 600; margin-bottom: 8px; lett
         </div>
         <div class="route-item">
             <span class="route-time drive">🚗</span>
-            <span class="route-place drive-text">ドライブ 20分</span>
+            <span class="route-place drive-text">ドライブ 10分</span>
         </div>
         <div class="route-item">
-            <span class="route-time">14:10</span>
+            <span class="route-time">14:00</span>
+            <span class="route-place">日光ランチ</span>
+            <span class="route-note">〜14:50（45〜60分）</span>
+        </div>
+        <div class="route-item">
+            <span class="route-time drive">🚗</span>
+            <span class="route-place drive-text">ドライブ 15分</span>
+        </div>
+        <div class="route-item">
+            <span class="route-time">15:10</span>
             <span class="route-place">霧降の滝</span>
-            <span class="route-note">〜14:50（30〜40分）</span>
+            <span class="route-note">〜16:00（40〜50分）</span>
         </div>
         <div class="route-item">
             <span class="route-time drive">🚗</span>
-            <span class="route-place drive-text">ドライブ 10〜15分</span>
+            <span class="route-place drive-text">ドライブ 25〜30分</span>
         </div>
         <div class="route-item">
-            <span class="route-time">15:00</span>
-            <span class="route-place">日光 和食ランチ</span>
-            <span class="route-note">〜15:50</span>
-        </div>
-        <div class="route-item">
-            <span class="route-time drive">🚗</span>
-            <span class="route-place drive-text">ドライブ 25分</span>
-        </div>
-        <div class="route-item">
-            <span class="route-time">16:20</span>
+            <span class="route-time">16:30</span>
             <span class="route-place">🐾 あおぞら館</span>
             <span class="route-note">ポケふた①（10〜20分）</span>
         </div>
@@ -261,56 +267,52 @@ h3 { color: #C9A96E; font-size: 1rem; font-weight: 600; margin-bottom: 8px; lett
         </div>
         <div class="route-item">
             <span class="route-time drive">🚗</span>
-            <span class="route-place drive-text">ドライブ 10分 ／ 返却</span>
+            <span class="route-place drive-text">ドライブ 15分</span>
         </div>
         <div class="route-item">
             <span class="route-time">17:40</span>
-            <span class="route-place">🐾 宇都宮市内</span>
+            <span class="route-place">🐾 駅東公園</span>
             <span class="route-note">ポケふた③ ラスト</span>
         </div>
         <div class="route-item">
-            <span class="route-time">18:00〜</span>
+            <span class="route-time drive">🚗</span>
+            <span class="route-place drive-text">ドライブ 5分</span>
+        </div>
+        <div class="route-item">
+            <span class="route-time car-return">18:00まで</span>
+            <span class="route-place return-text">トヨタレンタカー宇都宮今泉店 返却</span>
+        </div>
+        <div class="route-item">
+            <span class="route-time">18:10〜</span>
             <span class="route-place">餃子タイム</span>
             <span class="route-note">コンプリート祝い</span>
         </div>
     </div>
 </div>
 
-<!-- 3: レンタカー受取 -->
+<!-- 3: トヨタレンタカー受取 -->
 <div class="slide">
-    <span class="slide-number">03 / 16</span>
+    <span class="slide-number">03 / 17</span>
     <h2>東武日光駅 着</h2>
     <div class="car-box">
-        <div class="car-name">レンタカー受取</div>
+        <div class="car-name">トヨタレンタカー受取</div>
         <div class="car-route">12:00着 → 受取15分 → 12:20出発</div>
-        <div class="detail-item">駅前のレンタカー店で受け取り</div>
         <div class="detail-item">カーナビに「日光東照宮 西参道駐車場」をセット</div>
+        <div class="detail-item">返却先：トヨタレンタカー宇都宮今泉店（18:00まで）</div>
     </div>
-    <h3>駅前レンタカー候補</h3>
+    <h3>東武日光駅前 レンタカー</h3>
     <div class="card featured">
-        <div class="card-name">ニッポンレンタカー 東武日光駅前<span class="rec-badge">PICK</span></div>
-        <div class="card-price">8,030円〜 ／ 24時間</div>
-        <div class="card-note">東武日光駅すぐ隣（徒歩1分）／ 営業: 9:00〜18:00</div>
-        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=ニッポンレンタカー+東武日光駅前" target="_blank">マップ</a>
-        <a class="map-link" href="https://store.nipponrentacar.co.jp/b/nrs/info/570947/" target="_blank">公式予約</a>
+        <div class="card-name">トヨタレンタカー 東武日光駅前店<span class="rec-badge">確定</span></div>
+        <div class="card-price">6,600円〜 ／ 乗り捨て可（今泉店へ返却）</div>
+        <div class="card-note">東武日光駅から徒歩2分（約110m）／ 営業: 8:00〜20:00<br>宇都宮今泉店への乗り捨ては予約時に申込み済みであること</div>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=トヨタレンタカー+東武日光駅前店" target="_blank">マップ</a>
     </div>
-    <div class="card">
-        <div class="card-name">トヨタレンタカー 日光駅前店</div>
-        <div class="card-price">6,600円〜 ／ 乗り捨て可</div>
-        <div class="card-note">徒歩2分 ／ 営業: 8:00〜20:00</div>
-        <a class="map-link" href="https://rent.toyota.co.jp/sp/shop/detail.aspx?rCode=63201&eCode=018" target="_blank">公式予約</a>
-    </div>
-    <div class="card">
-        <div class="card-name">複数社を比較するなら</div>
-        <div class="card-note">じゃらん・楽天トラベルで「東武日光駅」を検索</div>
-        <a class="map-link" href="https://www.jalan.net/rentacar/search/EST_S016738/plan/" target="_blank">じゃらん</a>
-        <a class="map-link" href="https://cars.travel.rakuten.co.jp/cars/station/tochigi/102759.html" target="_blank">楽天</a>
-    </div>
+    <div class="warning-box">乗り捨て（ワンウェイ）は事前予約が必須。追加料金がかかるので予約時に確認すること。</div>
 </div>
 
 <!-- 4: 日光東照宮 -->
 <div class="slide">
-    <span class="slide-number">04 / 16</span>
+    <span class="slide-number">04 / 17</span>
     <h2>日光東照宮</h2>
     <div class="time-badge">12:20 — 13:50 ／ 60〜90分</div>
     <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=日光東照宮" target="_blank">Googleマップ</a>
@@ -334,35 +336,18 @@ h3 { color: #C9A96E; font-size: 1rem; font-weight: 600; margin-bottom: 8px; lett
         <div class="route-item"><span class="route-time" style="min-width:28px; font-size:0.8rem;">04</span><span class="route-place" style="font-size:0.9rem;">眠り猫 → 奥宮（207段）</span></div>
         <div class="route-item"><span class="route-time" style="min-width:28px; font-size:0.8rem;">05</span><span class="route-place" style="font-size:0.9rem;">本地堂（鳴龍）</span></div>
     </div>
-    <div class="drive-seg" style="margin-top:12px;">次：霧降の滝へ 約20分</div>
+    <div class="card drive-note" style="margin-top:12px;">
+        <div class="card-name">この周辺の運転について</div>
+        <div class="card-note">観光客が多い。歩行者の急な横断に注意。駐車場の出入りにも注意。</div>
+    </div>
+    <div class="drive-seg" style="margin-top:12px;">次：日光市内でランチへ 約10分</div>
 </div>
 
-<!-- 5: 霧降の滝 -->
+<!-- 5: 日光 和食ランチ -->
 <div class="slide">
-    <span class="slide-number">05 / 16</span>
-    <h2>霧降の滝</h2>
-    <div class="time-badge">14:10 — 14:50 ／ 30〜40分</div>
-    <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=霧降の滝+日光" target="_blank">Googleマップ</a>
-    <div class="info-grid" style="margin-top:12px;">
-        <div class="info-label">入場料</div><div class="info-value">無料</div>
-        <div class="info-label">駐車場</div><div class="info-value">無料（第1〜4駐車場）</div>
-        <div class="info-label">観瀑台まで</div><div class="info-value">徒歩10〜15分</div>
-        <div class="info-label">営業時間</div><div class="info-value">9:00〜17:00（4〜11月）</div>
-        <div class="info-label">東照宮から</div><div class="info-value">車で約20分</div>
-    </div>
-    <div class="card featured">
-        <div class="card-name">日光三大名瀑 ／ 入場無料<span class="rec-badge">PICK</span></div>
-        <div class="card-note">二段に分かれて白糸のように流れ落ちる優美な滝。華厳の滝と違い<strong>無料で見られる穴場スポット</strong>。静かな森の中で眺める滝は格別。</div>
-    </div>
-    <div class="warning-box">観瀑台まで多少の登り道あり。歩きやすい靴で行くこと。</div>
-    <div class="drive-seg" style="margin-top:12px;">次：日光市内で和食ランチへ 約10〜15分</div>
-</div>
-
-<!-- 6: 日光 和食ランチ -->
-<div class="slide">
-    <span class="slide-number">06 / 16</span>
+    <span class="slide-number">05 / 17</span>
     <h2>日光 和食ランチ</h2>
-    <div class="time-badge">15:00 — 15:50 ／ ゆっくり食べよう</div>
+    <div class="time-badge">14:00 — 14:50 ／ ゆっくり食べよう</div>
     <div class="card featured">
         <div class="card-name">ゆば蕎麦 日光もみぢ庵<span class="rec-badge">PICK</span></div>
         <div class="card-price">950円〜 ／ セット 1,400円</div>
@@ -370,7 +355,7 @@ h3 { color: #C9A96E; font-size: 1rem; font-weight: 600; margin-bottom: 8px; lett
         <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=ゆば蕎麦+日光もみぢ庵" target="_blank">マップ</a>
     </div>
     <div class="card">
-        <div class="card-name">そば処 林屋</div>
+        <div class="card-name">そば処 林屋（はやしや）</div>
         <div class="card-price">ゆば御膳＋ざるそば 約2,000円</div>
         <div class="card-note">営業: 10:00〜15:00 ／ 木曜定休 ／ 昭和30年創業</div>
         <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=そば処+林屋+日光" target="_blank">マップ</a>
@@ -381,13 +366,34 @@ h3 { color: #C9A96E; font-size: 1rem; font-weight: 600; margin-bottom: 8px; lett
         <div class="card-note">営業: 11:00〜15:00（LO14:30）</div>
         <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=本家やまびこ+日光" target="_blank">マップ</a>
     </div>
-    <div class="warning-box">どのお店も15:00前後には閉まる。早めに入ること。</div>
-    <div class="drive-seg" style="margin-top:12px;">次：ろまんちっく村へ 約25分 ／ ポケふたミッション開始</div>
+    <div class="warning-box">どのお店も15:00前後には閉まる。14:30までには入ること。</div>
+    <div class="drive-seg" style="margin-top:12px;">次：霧降の滝へ 約15分</div>
+</div>
+
+<!-- 6: 霧降の滝 -->
+<div class="slide">
+    <span class="slide-number">06 / 17</span>
+    <h2>霧降の滝</h2>
+    <div class="time-badge">15:10 — 16:00 ／ 40〜50分</div>
+    <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=霧降の滝+日光" target="_blank">Googleマップ</a>
+    <div class="info-grid" style="margin-top:12px;">
+        <div class="info-label">入場料</div><div class="info-value">無料</div>
+        <div class="info-label">駐車場</div><div class="info-value">無料（第1〜4駐車場）</div>
+        <div class="info-label">観瀑台まで</div><div class="info-value">徒歩10〜15分</div>
+        <div class="info-label">営業時間</div><div class="info-value">9:00〜17:00（4〜11月）</div>
+        <div class="info-label">東照宮から</div><div class="info-value">車で約15〜20分</div>
+    </div>
+    <div class="card featured">
+        <div class="card-name">日光三大名瀑 ／ 入場無料<span class="rec-badge">PICK</span></div>
+        <div class="card-note">二段に分かれて白糸のように流れ落ちる優美な滝。<strong>入場無料の穴場スポット</strong>。景色係は助手席担当。焦らずゆっくり運転しよう。</div>
+    </div>
+    <div class="warning-box">観瀑台まで多少の登り道あり。歩きやすい靴で行くこと。</div>
+    <div class="drive-seg" style="margin-top:12px;">次：あおぞら館へ 約25〜30分 ／ ポケふたミッション開始</div>
 </div>
 
 <!-- 7: ポケふた ミッション -->
 <div class="slide">
-    <span class="slide-number">07 / 16</span>
+    <span class="slide-number">07 / 17</span>
     <h2>ポケふた ミッション</h2>
     <p style="font-size:0.85rem; color:#5A5A5A; margin-bottom:16px; letter-spacing:0.05em;">タップしてチェック</p>
 
@@ -420,7 +426,7 @@ h3 { color: #C9A96E; font-size: 1rem; font-weight: 600; margin-bottom: 8px; lett
             <div class="poke-num">③</div>
             <div>
                 <div class="poke-label">エレブー＆ホシガリス</div>
-                <div class="poke-location">宇都宮市 駅東公園</div>
+                <div class="poke-location">宇都宮市 駅東公園（ラスト回収地点）</div>
             </div>
             <div class="poke-tap">TAP</div>
         </label>
@@ -434,9 +440,9 @@ h3 { color: #C9A96E; font-size: 1rem; font-weight: 600; margin-bottom: 8px; lett
 
 <!-- 8: あおぞら館（ポケふた①） -->
 <div class="slide">
-    <span class="slide-number">08 / 16</span>
+    <span class="slide-number">08 / 17</span>
     <h2>ポケふた① あおぞら館</h2>
-    <div class="time-badge">16:20 — 16:40 ／ 10〜20分</div>
+    <div class="time-badge">16:30 — 16:50 ／ 10〜20分</div>
     <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=道の駅うつのみや+ろまんちっく村" target="_blank">Googleマップ</a>
     <div class="info-grid" style="margin-top:12px;">
         <div class="info-label">場所</div><div class="info-value">道の駅うつのみや ろまんちっく村（新里町丙254）</div>
@@ -446,14 +452,14 @@ h3 { color: #C9A96E; font-size: 1rem; font-weight: 600; margin-bottom: 8px; lett
     </div>
     <div class="card featured">
         <div class="card-name">ポケふた撮影 → あおぞら館<span class="rec-badge">PICK</span></div>
-        <div class="card-note">入口のポケふたを撮ったら直売所へ。栃木の地元野菜やお土産をゆっくり見られる。旅の途中の小休憩にちょうどいい。</div>
+        <div class="card-note">入口のポケふたを撮ったら直売所へ。栃木の地元野菜やお土産をゆっくり見られる。</div>
     </div>
     <div class="drive-seg" style="margin-top:12px;">次：八幡山公園へ 約20分</div>
 </div>
 
 <!-- 9: 八幡山公園（ポケふた②） -->
 <div class="slide">
-    <span class="slide-number">09 / 16</span>
+    <span class="slide-number">09 / 17</span>
     <h2>ポケふた② 八幡山公園</h2>
     <div class="time-badge">17:00 — 17:30 ／ 15〜30分</div>
     <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=八幡山公園+宇都宮" target="_blank">Googleマップ</a>
@@ -467,42 +473,86 @@ h3 { color: #C9A96E; font-size: 1rem; font-weight: 600; margin-bottom: 8px; lett
         <div class="card-name">公園散策も</div>
         <div class="card-note">広い公園なのでポケふた撮影のついでにのんびり散歩も可。展望スポットから宇都宮の街並みを一望できる。</div>
     </div>
-    <div class="drive-seg" style="margin-top:12px;">次：宇都宮市内へ 約10分 ／ レンタカー返却</div>
+    <div class="drive-seg" style="margin-top:12px;">次：駅東公園へ 約15分 ／ ラスト！</div>
 </div>
 
-<!-- 10: 宇都宮市内（ポケふた③） -->
+<!-- 10: 駅東公園（ポケふた③） -->
 <div class="slide">
-    <span class="slide-number">10 / 16</span>
-    <h2>ポケふた③ 宇都宮市内</h2>
-    <div class="time-badge">17:40 — 18:00 ／ ラスト回収</div>
+    <span class="slide-number">10 / 17</span>
+    <h2>ポケふた③ 駅東公園</h2>
+    <div class="time-badge">17:40 — 17:55 ／ ラスト回収</div>
+    <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=宇都宮市駅東公園" target="_blank">Googleマップ</a>
     <div class="card featured">
         <div class="card-name">エレブー＆ホシガリス<span class="rec-badge">LAST</span></div>
-        <div class="card-note">📍 宇都宮市駅東公園（元今泉5丁目10-1）<br>JR宇都宮駅 東口 → LRT「駅東公園前」→ 徒歩3分<br>プールの入口付近。イチョウ並木が美しい。</div>
-        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=宇都宮市駅東公園+ポケふた" target="_blank">マップ</a>
+        <div class="card-note">宇都宮市駅東公園（元今泉5丁目10-1）<br>プールの入口付近。イチョウ並木が美しい。<br>車で直接アクセス → 駐車して撮影。</div>
     </div>
-    <div class="car-box">
-        <div class="car-name">レンタカー返却</div>
-        <div class="car-route">八幡山公園 → JR宇都宮駅周辺で返却</div>
-        <div class="detail-item">返却後はLRTで駅東公園へ（約8分・150円）</div>
-        <div class="detail-item">ポケふた③ 回収後は餃子へ</div>
+    <div class="car-box return-box">
+        <div class="car-name return">ポケふた③回収後 → 今泉店へ返却</div>
+        <div class="car-route">駅東公園 → トヨタレンタカー宇都宮今泉店（約5分）</div>
+        <div class="detail-item">18:00「まで」に返却（ちょうど18:00でなくてOK）</div>
+        <div class="detail-item">返却後は徒歩で餃子エリアへ</div>
     </div>
     <div class="warning-box">⚡ 宇都宮の3枚は全部「雷」系 — ラクライ・エレブー・ボルトロス</div>
 </div>
 
 <!-- 11: コンプリート -->
 <div class="slide complete-slide">
-    <span class="slide-number" style="color:#C9A96E80;">11 / 16</span>
+    <span class="slide-number" style="color:#C9A96E80;">11 / 17</span>
     <div class="complete-emoji">⚡</div>
     <div class="complete-title">COMPLETE</div>
     <div class="complete-checks">ラクライ ✓  エレブー ✓  ボルトロス ✓</div>
-    <div class="complete-sub">宇都宮 ポケふた全3枚制覇。あとは餃子で締めるだけ。</div>
+    <div class="complete-sub">宇都宮 ポケふた全3枚制覇。あとは返却して餃子で締めるだけ。</div>
 </div>
 
-<!-- 12: 宇都宮餃子 -->
+<!-- 12: ドライブ注意ポイント -->
 <div class="slide">
-    <span class="slide-number">12 / 16</span>
+    <span class="slide-number">12 / 17</span>
+    <h2>ドライブ注意ポイント</h2>
+
+    <div class="card featured">
+        <div class="card-name">日光東照宮周辺</div>
+        <div class="card-note">
+            観光客が多い。<strong>歩行者優先意識</strong>で走ること。<br>
+            急な横断・飛び出しに注意。<br>
+            駐車場の出入りにも気をつけること。
+        </div>
+    </div>
+
+    <div class="card drive-note">
+        <div class="card-name">宇都宮市内</div>
+        <div class="card-note">
+            早めの車線選択が重要。<br>
+            左右折専用レーンに注意。<br>
+            ナビ案内の<strong>300m手前で車線確認</strong>すること。
+        </div>
+    </div>
+
+    <div class="card drive-note">
+        <div class="card-name">ポケふた巡り</div>
+        <div class="card-note">
+            路肩停車ではなく<strong>駐車場を使って</strong>回ること。<br>
+            「ちょっとだけ」の路駐が事故のもと。<br>
+            焦らず止める場所を探してOK。
+        </div>
+    </div>
+
+    <div class="card buffer-box" style="margin-top:16px;">
+        <div class="card-name">予備時間（バッファ）— 20〜30分</div>
+        <div class="card-note">
+            — 寄り道・追加写真<br>
+            — 休憩・トイレ<br>
+            — 渋滞・予期せぬ出来事<br>
+            — 「ここ見たい」の突発リクエスト<br>
+            <strong>時間に余裕を持って楽しむこと。</strong>
+        </div>
+    </div>
+</div>
+
+<!-- 13: 宇都宮餃子 -->
+<div class="slide">
+    <span class="slide-number">13 / 17</span>
     <h2>宇都宮餃子</h2>
-    <div class="time-badge">18:00〜 ／ コンプリート祝い</div>
+    <div class="time-badge">18:10〜 ／ コンプリート祝い</div>
     <div class="card featured">
         <div class="card-name">宇都宮みんみん 本店<span class="rec-badge">PICK</span></div>
         <div class="card-price">焼餃子 380円 ／ 水餃子 380円 ／ ライス 220円</div>
@@ -523,9 +573,9 @@ h3 { color: #C9A96E; font-size: 1rem; font-weight: 600; margin-bottom: 8px; lett
     </div>
 </div>
 
-<!-- 13: 持ち物＆費用 -->
+<!-- 14: 持ち物＆費用 -->
 <div class="slide">
-    <span class="slide-number">13 / 16</span>
+    <span class="slide-number">14 / 17</span>
     <h2>持ち物＆費用まとめ</h2>
     <span class="section-label">持ち物リスト</span>
     <div class="packing-grid">
@@ -543,15 +593,14 @@ h3 { color: #C9A96E; font-size: 1rem; font-weight: 600; margin-bottom: 8px; lett
         <tr><td>日光東照宮</td><td>1,600円</td></tr>
         <tr><td>霧降の滝</td><td>無料</td></tr>
         <tr><td>あおぞら館</td><td>無料（買い物は別）</td></tr>
-        <tr><td>LRT（宇都宮）</td><td>150〜200円</td></tr>
         <tr><td>宇都宮餃子</td><td>〜1,500円</td></tr>
     </table>
     <div class="total-box">拝観料合計 約1,600円〜 ＋ レンタカー・ガソリン・駐車場・食事</div>
 </div>
 
-<!-- 14: お役立ちTips -->
+<!-- 15: お役立ちTips -->
 <div class="slide">
-    <span class="slide-number">14 / 16</span>
+    <span class="slide-number">15 / 17</span>
     <h2>お役立ちTips</h2>
     <div class="card">
         <div class="card-name">日光は東京より5〜10度低い</div>
@@ -563,7 +612,7 @@ h3 { color: #C9A96E; font-size: 1rem; font-weight: 600; margin-bottom: 8px; lett
     </div>
     <div class="card">
         <div class="card-name">あおぞら館は18:00閉館</div>
-        <div class="card-note">16:20頃に着けば直売所もゆっくり見られる。栃木のお土産を買うチャンス。</div>
+        <div class="card-note">16:30頃に着けば直売所もゆっくり見られる。栃木のお土産を買うチャンス。</div>
     </div>
     <div class="card">
         <div class="card-name">帰りはJR宇都宮駅から</div>
@@ -571,34 +620,30 @@ h3 { color: #C9A96E; font-size: 1rem; font-weight: 600; margin-bottom: 8px; lett
     </div>
 </div>
 
-<!-- 15: レンタカー返却 -->
+<!-- 16: トヨタレンタカー宇都宮今泉店 返却 -->
 <div class="slide">
-    <span class="slide-number">15 / 16</span>
+    <span class="slide-number">16 / 17</span>
     <h2>レンタカー返却</h2>
-    <div class="car-box">
-        <div class="car-name">宇都宮市内で返却</div>
-        <div class="car-route">八幡山公園 → JR宇都宮駅周辺（約10分）</div>
-        <div class="detail-item">各社宇都宮駅周辺に返却場所あり</div>
-        <div class="detail-item">返却後はLRTで駅東公園へ（ポケふた③）</div>
+    <div class="car-box return-box">
+        <div class="car-name return">トヨタレンタカー宇都宮今泉店</div>
+        <div class="car-route">駅東公園 → 今泉店（約5分）</div>
+        <div class="detail-item">18:00「まで」に返却（ちょうど18:00でなくてOK）</div>
+        <div class="detail-item">乗り捨て料金は予約時に支払い済みであること</div>
     </div>
     <div class="card featured">
-        <div class="card-name">トヨタレンタカー 宇都宮駅前店</div>
-        <div class="card-note">JR宇都宮駅前 ／ 乗り捨て可（日光→宇都宮で返却）</div>
-        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=トヨタレンタカー+宇都宮駅前" target="_blank">マップ</a>
+        <div class="card-name">トヨタレンタカー 宇都宮今泉店<span class="rec-badge">返却先</span></div>
+        <div class="card-note">宇都宮市今泉 ／ JR宇都宮駅 東口から近い<br>返却後は徒歩で餃子エリアへ</div>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=トヨタレンタカー+宇都宮今泉店" target="_blank">マップ</a>
     </div>
-    <div class="card">
-        <div class="card-name">ニッポンレンタカー 宇都宮駅前</div>
-        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=ニッポンレンタカー+宇都宮駅前" target="_blank">マップ</a>
-    </div>
-    <div class="warning-box">乗り捨て（ワンウェイ）は予約時に申込み必須。追加料金がかかる場合あり。</div>
+    <div class="warning-box">返却時は給油確認・車内の忘れ物チェックも忘れずに。</div>
 </div>
 
-<!-- 16: END -->
+<!-- 17: END -->
 <div class="slide" style="text-align:center; padding:40px 36px; background:#1E2761; border-top:3px solid #C9A96E;">
-    <span class="slide-number" style="color:#C9A96E80;">16 / 16</span>
+    <span class="slide-number" style="color:#C9A96E80;">17 / 17</span>
     <div style="color:#C9A96E; font-size:0.85rem; letter-spacing:0.2em; margin: 20px 0 12px;">HAVE A GREAT TRIP</div>
-    <div style="color:#FAF8F5; font-size:1.4rem; font-weight:700;">⛩️ 🌊 🐾 🥟</div>
-    <div style="color:#C9A96E; font-size:0.9rem; margin-top:16px; font-weight:600;">日光 → ドライブ → ポケふた全制覇 → 餃子</div>
+    <div style="color:#FAF8F5; font-size:1.4rem; font-weight:700;">⛩️ 🍱 🌊 🐾 🥟</div>
+    <div style="color:#C9A96E; font-size:0.9rem; margin-top:16px; font-weight:600;">日光 → ランチ → 滝 → ポケふた全制覇 → 餃子</div>
 </div>
 
 <script>
