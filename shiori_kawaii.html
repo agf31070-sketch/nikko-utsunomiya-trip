@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>日光・宇都宮 ぶらり旅 (kawaii)</title>
+<title>日光・宇都宮 レンタカー旅 (kawaii)</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700;900&display=swap');
 
@@ -94,9 +94,9 @@ h3 {
     color: #fff;
     padding: 8px 24px;
     border-radius: 30px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 700;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
 }
 .cover-deco {
     font-size: 2rem;
@@ -149,10 +149,23 @@ h3 {
     margin: 12px 0;
     border: 2px dashed #D4607A40;
 }
+.car-box {
+    background: rgba(255,255,255,0.6);
+    border-radius: 16px;
+    padding: 20px;
+    margin: 12px 0;
+    border: 2px dashed #5B9BD540;
+}
 .train-name {
     font-size: 1.2rem;
     font-weight: 700;
     color: #D4607A;
+    margin-bottom: 8px;
+}
+.car-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #5B9BD5;
     margin-bottom: 8px;
 }
 .train-route {
@@ -360,382 +373,391 @@ h3 {
 </head>
 <body>
 
+<!-- 1: 表紙 -->
 <div class="slide cover-slide" style="background: linear-gradient(135deg, #FFB6C140, #FFB6C180);">
-    <div class="cover-deco">✨✨✨</div>
-    <h1>日光・宇都宮 ぶらり旅</h1>
-    <div class="cover-deco">✨✨✨</div>
-    <div class="date">2026.4.11 SAT</div>
+    <div class="cover-deco">🚗✨🚗</div>
+    <h1>日光・宇都宮<br>レンタカー旅</h1>
+    <div class="cover-deco">⛩️🌊🥟</div>
+    <div class="date">歴史 → いろは坂ドライブ → 滝 → 湖 → 餃子</div>
 </div>
 
+<!-- 2: 旅のルート -->
 <div class="slide" style="background: linear-gradient(135deg, #87CEEB30, #87CEEB60);">
-    <span class="slide-number">2 / 18</span>
+    <span class="slide-number">2 / 17</span>
     <h2>旅のルート</h2>
     <div class="route-timeline">
-                <div class="route-item">
-                    <span class="route-time">10:30</span>
-                    <span class="route-place">浅草</span>
-                    <span class="route-note"></span>
-                </div>
-                <div class="route-item">
-                    <span class="route-time">12:21</span>
-                    <span class="route-place">日光</span>
-                    <span class="route-note">特急けごん17号</span>
-                </div>
-                <div class="route-item">
-                    <span class="route-time">16:45</span>
-                    <span class="route-place">宇都宮</span>
-                    <span class="route-note">JR日光線</span>
-                </div>
-                <div class="route-item">
-                    <span class="route-time">19:50</span>
-                    <span class="route-place">東京</span>
-                    <span class="route-note">新幹線</span>
-                </div>
-    </div>
-    <div style="text-align:center; margin-top:12px; font-size:0.85rem; color:#5B9BD5;">
-        特急けごん17号 → JR日光線 → 新幹線
+        <div class="route-item">
+            <span class="route-time">12:21</span>
+            <span class="route-place">東武日光駅 着</span>
+            <span class="route-note">レンタカー手続き</span>
+        </div>
+        <div class="route-item">
+            <span class="route-time">12:45</span>
+            <span class="route-place">🚗 日光東照宮</span>
+            <span class="route-note">〜14:10</span>
+        </div>
+        <div class="route-item">
+            <span class="route-time">14:20</span>
+            <span class="route-place">神橋</span>
+            <span class="route-note">写真だけでもOK</span>
+        </div>
+        <div class="route-item">
+            <span class="route-time">14:35</span>
+            <span class="route-place">🚗 いろは坂ドライブ</span>
+            <span class="route-note">クネクネ48カーブ</span>
+        </div>
+        <div class="route-item">
+            <span class="route-time">14:50</span>
+            <span class="route-place">華厳の滝</span>
+            <span class="route-note">〜15:30</span>
+        </div>
+        <div class="route-item">
+            <span class="route-time">15:30</span>
+            <span class="route-place">中禅寺湖 散歩</span>
+            <span class="route-note">〜15:50</span>
+        </div>
+        <div class="route-item">
+            <span class="route-time">16:00</span>
+            <span class="route-place">🚗 宇都宮へ出発</span>
+            <span class="route-note">約45〜60分</span>
+        </div>
+        <div class="route-item">
+            <span class="route-time">17:00〜</span>
+            <span class="route-place">ポケふた＋餃子🥟</span>
+            <span class="route-note">宇都宮！</span>
+        </div>
     </div>
 </div>
 
+<!-- 3: 東武日光駅 → レンタカー -->
 <div class="slide" style="background: linear-gradient(135deg, #FFE4B530, #FFE4B560);">
-    <span class="slide-number">3 / 18</span>
-    <h2>出発！</h2>
-        <div class="transport-box">
-        <div class="train-name">特急けごん17号（スペーシア）</div>
-        <div class="train-route">浅草駅 10:30発 → 東武日光駅 12:21頃着</div>
-        <div class="detail-item">乗車券＋特急券 約2,700〜2,960円</div><div class="detail-item">約1時間51分</div>
+    <span class="slide-number">3 / 17</span>
+    <h2>東武日光駅 着！🚗</h2>
+    <div class="car-box">
+        <div class="car-name">🚗 レンタカー手続き</div>
+        <div class="train-route">12:21着 → 手続き10〜15分 → 12:45出発</div>
+        <div class="detail-item">駅近くのレンタカー店で車を受け取り</div>
+        <div class="detail-item">カーナビに「日光東照宮 西参道駐車場」をセット</div>
+        <div class="detail-item">東照宮まで車で約5〜10分</div>
     </div>
-    <div class="transport-box" style="margin-top:12px;">
-        <div class="train-name">東武日光駅 → 東照宮</div>
-        <div class="detail-item"><strong>徒歩 約30分</strong>（2km）食べ歩き＆お土産屋を楽しみながら</div>
-        <div class="detail-item"><strong>バス 約10分</strong>（320円）「世界遺産めぐり」循環バス / 約20分間隔</div>
-        <div class="detail-item">バス停「表参道」下車 → 東照宮まで徒歩5分</div>
+    <div class="car-box">
+        <div class="car-name">🅿️ 東照宮周辺 駐車場</div>
+        <div class="detail-item">西参道駐車場（東照宮から徒歩5分）</div>
+        <div class="detail-item">市営観光駐車場（表参道付近）</div>
+        <div class="detail-item">目安: 500〜800円/h</div>
     </div>
-    <div class="warning-box">行きは徒歩で街歩き、帰りはバスが時間的におすすめ</div>
-    
+    <div class="warning-box">土日は駐車場が混雑する場合あり。カーナビを使って最短ルートで</div>
+    <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=東武日光駅+レンタカー" target="_blank">レンタカー</a>
+    <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=日光東照宮+西参道駐車場" target="_blank">駐車場</a>
 </div>
 
+<!-- 4: 日光東照宮 -->
 <div class="slide" style="background: linear-gradient(135deg, #98FB9830, #98FB9860);">
-    <span class="slide-number">4 / 18</span>
-    <h2>日光東照宮</h2>
-        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=日光東照宮" target="_blank">Googleマップで見る</a>
-    <div class="info-grid" style="margin-top:12px;"><div class="info-label">拝観料</div><div class="info-value">大人1,300円</div><div class="info-label">拝観時間</div><div class="info-value">9:00〜17:00（最終受付16:30）</div><div class="info-label">所要時間</div><div class="info-value">約1.5時間</div><div class="info-label">予定</div><div class="info-value">14:00〜15:30</div></div>
-    <h3>見どころ</h3>
-    <div class="highlights"><span class="highlight-tag">陽明門</span><span class="highlight-tag">眠り猫</span><span class="highlight-tag">三猿</span><span class="highlight-tag">鳴龍</span></div>
-</div>
-
-<div class="slide" style="background: linear-gradient(135deg, #E6E6FA30, #E6E6FA60);">
-    <span class="slide-number">5 / 18</span>
-    <h2>日光ランチ</h2>
-    <h3>和食・ゆば蕎麦</h3>
-    <div class="time-badge">12:30〜13:30 東照宮周辺</div>
-                    <div class="restaurant-card recommended">
-                    <div class="restaurant-name">ゆば蕎麦 日光もみぢ庵<span class="rec-badge">おすすめ</span></div>
-                    <div class="restaurant-price">ゆば蕎麦1,200円〜</div>
-                    <div class="restaurant-note">東照宮近く</div>
-                    <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=ゆば蕎麦+日光もみぢ庵" target="_blank">マップ</a>
-                </div>
-                <div class="restaurant-card">
-                    <div class="restaurant-name">そば処 林屋</div>
-                    <div class="restaurant-price">ゆば三種セット＋そば約2,000円</div>
-                    <div class="restaurant-note">東照宮徒歩5分</div>
-                    <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=そば処+林屋+日光" target="_blank">マップ</a>
-                </div>
-                <div class="restaurant-card">
-                    <div class="restaurant-name">本家やまびこ</div>
-                    <div class="restaurant-price">生ゆば刺身600円〜、1,000〜1,500円</div>
-                    <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=本家やまびこ+日光" target="_blank">マップ</a>
-                </div>
-</div>
-
-<div class="slide" style="background: linear-gradient(135deg, #FFB6C130, #FFB6C160);">
-    <span class="slide-number">6 / 18</span>
-    <h2>日光→宇都宮へ移動</h2>
-    <div class="transport-box">
-        <div class="train-name">JR日光線</div>
-        <div class="train-route">JR日光駅 16:00頃発 → JR宇都宮駅 16:45頃着</div>
-        <div class="detail-item">約41分、810円</div>
+    <span class="slide-number">4 / 17</span>
+    <h2>日光東照宮 ⛩️</h2>
+    <div class="time-badge">12:45〜14:10（約1時間25分）</div>
+    <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=日光東照宮" target="_blank">Googleマップ</a>
+    <div class="info-grid" style="margin-top:12px;">
+        <div class="info-label">拝観料</div><div class="info-value">大人 1,600円 / 中学生以下 550円</div>
+        <div class="info-label">営業時間</div><div class="info-value">8:00〜17:00（最終受付16:30）</div>
+        <div class="info-label">所要時間</div><div class="info-value">約1時間〜1時間30分</div>
+        <div class="info-label">駐車場</div><div class="info-value">周辺有料駐車場を利用</div>
     </div>
-    <div class="warning-box">東武日光駅→JR日光駅は徒歩2〜3分</div><div class="warning-box">日中1時間に1本！日光発: <strong>15:19 / 16:19 / 18:19</strong>（乗り遅れ注意）</div>
-</div>
-
-<div class="slide" style="background: linear-gradient(135deg, #87CEEB30, #87CEEB60);">
-    <span class="slide-number">7 / 18</span>
-    <h2>ポケふた巡り</h2>
-    <div class="time-badge">17:00〜17:30 宇都宮のポケモンマンホール</div>
-    
-                <div class="pokefuta-card recommended">
-                    <div class="restaurant-name">エレブー＆ホシガリス<span class="rec-badge">おすすめ</span></div>
-                    <div class="restaurant-note">駅東公園、LRT「駅東公園前」徒歩3分</div>
-                    <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=宇都宮駅東公園" target="_blank">マップ</a>
-                </div>
-                <div class="pokefuta-card">
-                    <div class="restaurant-name">ボルトロス</div>
-                    <div class="restaurant-note">八幡山公園、バス約10分</div>
-                    <div class="restaurant-note">時間があれば</div>
-                    <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=八幡山公園+宇都宮" target="_blank">マップ</a>
-                </div>
-</div>
-
-<div class="slide" style="background: linear-gradient(135deg, #FFE4B530, #FFE4B560);">
-    <span class="slide-number">8 / 18</span>
-    <h2>宇都宮餃子</h2>
-    
-    <div class="time-badge">17:30〜18:30</div>
-                    <div class="restaurant-card recommended">
-                    <div class="restaurant-name">宇都宮みんみん 本店<span class="rec-badge">おすすめ</span></div>
-                    <div class="restaurant-price">焼餃子6個380円</div>
-                    <div class="restaurant-note">昭和33年創業</div>
-                    <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=宇都宮みんみん+本店" target="_blank">マップ</a>
-                </div>
-                <div class="restaurant-card">
-                    <div class="restaurant-name">正嗣（まさし）</div>
-                    <div class="restaurant-price">焼餃子6個250円〜</div>
-                    <div class="restaurant-note">餃子のみの硬派な店</div>
-                    <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=正嗣+宮島本店+宇都宮" target="_blank">マップ</a>
-                </div>
-                <div class="restaurant-card">
-                    <div class="restaurant-name">来らっせ</div>
-                    <div class="restaurant-price">30店舗以上食べ比べ</div>
-                    <div class="restaurant-note">MEGAドンキ地下</div>
-                    <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=来らっせ+本店+宇都宮" target="_blank">マップ</a>
-                </div>
-</div>
-
-<div class="slide" style="background: linear-gradient(135deg, #98FB9830, #98FB9860);">
-    <span class="slide-number">9 / 18</span>
-    <h2>おうちへ帰ろう</h2>
-        <div class="transport-box">
-        <div class="train-name">東北新幹線（やまびこ／なすの）</div>
-        <div class="train-route">宇都宮駅 19:00頃発 → 東京駅 19:50頃着</div>
-        <div class="detail-item">約50分、自由席4,490円</div><div class="detail-item">予約不要</div>
+    <h3>外せない見どころ</h3>
+    <div class="highlights">
+        <span class="highlight-tag">陽明門（国宝）</span>
+        <span class="highlight-tag">三猿</span>
+        <span class="highlight-tag">眠り猫（国宝）</span>
+        <span class="highlight-tag">鳴龍</span>
+        <span class="highlight-tag">奥宮</span>
     </div>
-    <div class="warning-box">「つばさ」は全席指定</div>
 </div>
 
-<div class="slide" style="background: linear-gradient(135deg, #E6E6FA30, #E6E6FA60);">
-    <span class="slide-number">10 / 18</span>
-    <h2>持ち物＆交通費</h2>
-    <span class="section-label">持ち物リスト</span>
-    <div class="packing-grid"><div class="packing-item">スマホ＆充電器</div><div class="packing-item">お財布（現金多め）</div><div class="packing-item">交通系ICカード</div><div class="packing-item">飲み物＆おやつ</div><div class="packing-item">折りたたみ傘</div><div class="packing-item">カメラ</div><div class="packing-item">歩きやすい靴</div><div class="packing-item">ハンカチ＆ティッシュ</div></div>
-    <span class="section-label" style="margin-top:16px;">交通費まとめ</span>
-    <table class="cost-table"><tr><td>けごん17号</td><td>約2,960円</td></tr><tr><td>JR日光線</td><td>810円</td></tr><tr><td>LRT</td><td>数百円</td></tr><tr><td>新幹線自由席</td><td>4,490円</td></tr></table>
-    <div class="total-box">合計 約8,500円（＋拝観料1,300円、食事代）</div>
-</div>
-
-
+<!-- 5: 東照宮 見どころガイド -->
 <div class="slide" style="background: linear-gradient(135deg, #FFE4B530, #FFE4B560);">
-    <span class="slide-number">11 / 18</span>
+    <span class="slide-number">5 / 17</span>
     <h2>東照宮 見どころガイド</h2>
     <div class="time-badge">知っておくともっと楽しい！</div>
     <div class="restaurant-card recommended">
         <div class="restaurant-name">陽明門（ようめいもん）<span class="rec-badge">国宝</span></div>
-        <div class="restaurant-note">508体もの彫刻が施された豪華絢爛な門。一日中見ても飽きないことから<strong>「日暮の門」</strong>とも。柱の模様が1本だけ逆さまの<strong>「魔除けの逆柱」</strong>を探してみて！</div>
+        <div class="restaurant-note">508体の彫刻が施された豪華絢爛な門。一日中見ても飽きないことから<strong>「日暮の門」</strong>とも。柱の模様が1本だけ逆さまの<strong>「魔除けの逆柱」</strong>を探してみて！</div>
     </div>
     <div class="restaurant-card">
         <div class="restaurant-name">三猿（さんざる）</div>
-        <div class="restaurant-note">場所: 表門くぐってすぐ左の<strong>神厩舎</strong>（馬屋）の壁面。「見ざる・言わざる・聞かざる」は幼少期の教え。実は全8面で猿の一生を描いてる！</div>
+        <div class="restaurant-note">表門くぐってすぐ左の<strong>神厩舎</strong>の壁面。「見ざる・言わざる・聞かざる」は幼少期の教え。全8面で猿の一生を描いてる！</div>
     </div>
     <div class="restaurant-card">
         <div class="restaurant-name">眠り猫（ねむりねこ）<span class="rec-badge">国宝</span></div>
-        <div class="restaurant-note">場所: <strong>奥宮へ続く東廻廊の入口上部</strong>。左甚五郎の作。牡丹に囲まれ眠る猫＝平和の象徴。<strong>小さくて見落としやすい</strong>ので上を見て！</div>
+        <div class="restaurant-note"><strong>奥宮へ続く東廻廊の入口上部</strong>に飾られた小さな猫。牡丹に囲まれて眠る姿＝平和の象徴。<strong>上を見ないと見落とす！</strong></div>
     </div>
     <div class="restaurant-card">
         <div class="restaurant-name">鳴龍（なきりゅう）</div>
-        <div class="restaurant-note">場所: 本地堂。天井の巨大な龍（縦6m×横15m）の真下で僧侶が拍子木を打つと<strong>「キィーン」と不思議な共鳴音</strong>！龍が鳴いてるみたい。</div>
+        <div class="restaurant-note">本地堂の天井画（縦6m×横15m）。真下で拍子木を打つと<strong>「キィーン」と竜が鳴く不思議な共鳴音</strong>が聞こえる！</div>
     </div>
 </div>
 
+<!-- 6: 東照宮 参拝ルート -->
 <div class="slide" style="background: linear-gradient(135deg, #98FB9830, #98FB9860);">
-    <span class="slide-number">12 / 18</span>
-    <h2>東照宮 おすすめ参拝ルート</h2>
-    <div class="time-badge">約1.5時間コース</div>
+    <span class="slide-number">6 / 17</span>
+    <h2>東照宮 参拝ルート</h2>
+    <div class="time-badge">約1時間20分コース</div>
     <div class="route-timeline">
         <div class="route-item"><span class="route-time" style="min-width:24px;">1</span><span class="route-place">石鳥居・五重塔</span></div>
-        <div class="route-item"><span class="route-time" style="min-width:24px;">2</span><span class="route-place">表門</span></div>
-        <div class="route-item"><span class="route-time" style="min-width:24px;">3</span><span class="route-place">神厩舎（三猿）</span><span class="route-note">ここ！</span></div>
-        <div class="route-item"><span class="route-time" style="min-width:24px;">4</span><span class="route-place">陽明門</span><span class="route-note">メイン！</span></div>
-        <div class="route-item"><span class="route-time" style="min-width:24px;">5</span><span class="route-place">唐門・御本社（拝殿）</span></div>
-        <div class="route-item"><span class="route-time" style="min-width:24px;">6</span><span class="route-place">眠り猫 → 奥宮</span><span class="route-note">階段207段！</span></div>
-        <div class="route-item"><span class="route-time" style="min-width:24px;">7</span><span class="route-place">叶杉（パワースポット）</span></div>
-        <div class="route-item"><span class="route-time" style="min-width:24px;">8</span><span class="route-place">本地堂（鳴龍）</span><span class="route-note">最後！</span></div>
+        <div class="route-item"><span class="route-time" style="min-width:24px;">2</span><span class="route-place">表門 → 神厩舎（三猿）</span><span class="route-note">ここ！</span></div>
+        <div class="route-item"><span class="route-time" style="min-width:24px;">3</span><span class="route-place">陽明門</span><span class="route-note">メイン！</span></div>
+        <div class="route-item"><span class="route-time" style="min-width:24px;">4</span><span class="route-place">唐門・御本社（拝殿）</span></div>
+        <div class="route-item"><span class="route-time" style="min-width:24px;">5</span><span class="route-place">眠り猫 → 奥宮</span><span class="route-note">階段207段！</span></div>
+        <div class="route-item"><span class="route-time" style="min-width:24px;">6</span><span class="route-place">叶杉（パワースポット）</span></div>
+        <div class="route-item"><span class="route-time" style="min-width:24px;">7</span><span class="route-place">本地堂（鳴龍）</span><span class="route-note">最後！</span></div>
     </div>
-    <div class="warning-box">奥宮まで階段約200段以上！でも体力あるから大丈夫だね</div>
     <div style="margin-top:12px; display:flex; flex-wrap:wrap; gap:6px;">
-        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=日光東照宮+石鳥居" target="_blank">石鳥居</a>
-        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=日光東照宮+神厩舎+三猿" target="_blank">三猿</a>
         <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=日光東照宮+陽明門" target="_blank">陽明門</a>
         <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=日光東照宮+眠り猫" target="_blank">眠り猫</a>
         <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=日光東照宮+奥宮" target="_blank">奥宮</a>
-        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=日光東照宮+本地堂+鳴龍" target="_blank">鳴龍</a>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=日光東照宮+本地堂" target="_blank">鳴龍</a>
     </div>
 </div>
 
+<!-- 7: 神橋 -->
 <div class="slide" style="background: linear-gradient(135deg, #E6E6FA30, #E6E6FA60);">
-    <span class="slide-number">13 / 18</span>
-    <h2>日光グルメ 詳細ガイド</h2>
+    <span class="slide-number">7 / 17</span>
+    <h2>神橋（しんきょう）🌉</h2>
+    <div class="time-badge">14:20〜14:35（写真だけでもOK）</div>
+    <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=神橋+日光" target="_blank">Googleマップ</a>
+    <div class="info-grid" style="margin-top:12px;">
+        <div class="info-label">渡橋料金</div><div class="info-value">大人 300円（渡る場合）</div>
+        <div class="info-label">営業時間</div><div class="info-value">8:30〜16:00（4〜11月）</div>
+        <div class="info-label">アクセス</div><div class="info-value">東照宮から車で約3〜5分</div>
+        <div class="info-label">駐車場</div><div class="info-value">神橋周辺の路肩または短時間駐車</div>
+    </div>
     <div class="restaurant-card recommended">
-        <div class="restaurant-name">ゆば蕎麦 日光もみぢ庵<span class="rec-badge">おすすめ</span></div>
-        <div class="restaurant-price">ゆば蕎麦 950円 / ゆば蕎麦＋ゆば寿司セット 1,400円</div>
-        <div class="restaurant-note">営業: 11:00〜15:00頃 / 定休: 水曜 / 3種のゆば使用</div>
-        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=ゆば蕎麦+日光もみぢ庵" target="_blank">マップ</a>
+        <div class="restaurant-name">日本三大奇橋のひとつ</div>
+        <div class="restaurant-note">朱塗りが鮮やかな二荒山神社の神橋。大谷川に架かる美しいシルエットは外から眺めるだけでも絵になる！渡橋すると橋上からの渓流ビューも楽しめる。</div>
     </div>
-    <div class="restaurant-card">
-        <div class="restaurant-name">そば処 林屋</div>
-        <div class="restaurant-price">ゆば御膳＋ざるそば 2,000円 / ＋ミニ山菜そば 1,700円</div>
-        <div class="restaurant-note">営業: 10:00〜15:00 / 定休: 木曜 / 昭和30年創業</div>
-        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=そば処+林屋+日光" target="_blank">マップ</a>
-    </div>
-    <div class="restaurant-card">
-        <div class="restaurant-name">本家やまびこ</div>
-        <div class="restaurant-price">ゆば・手打ちそば・天ぷら</div>
-        <div class="restaurant-note">営業: 11:00〜15:00（LO 14:30）/ 基本年中無休</div>
-        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=本家やまびこ+日光" target="_blank">マップ</a>
-    </div>
-    <h3>食べ歩きもチェック！</h3>
-    <div class="restaurant-card">
-        <div class="restaurant-name">揚げゆばまんじゅう（日光さかえや）</div>
-        <div class="restaurant-note">東武日光駅前すぐ！1日3,000個売れる名物。外サクサク＋ほんのり塩味</div>
-        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=日光さかえや+揚げゆばまんじゅう" target="_blank">マップ</a>
-    </div>
+    <div class="warning-box">駐車は周辺の路肩や短時間駐車スペースを利用。サッと写真を撮るだけでもOK！</div>
 </div>
 
+<!-- 8: いろは坂 -->
 <div class="slide" style="background: linear-gradient(135deg, #FFB6C130, #FFB6C160);">
-    <span class="slide-number">14 / 18</span>
-    <h2>宇都宮餃子 詳細ガイド</h2>
+    <span class="slide-number">8 / 17</span>
+    <h2>いろは坂ドライブ 🚗</h2>
+    <div class="time-badge">14:35〜14:50 神橋 → 中禅寺湖エリア</div>
+    <div class="car-box">
+        <div class="car-name">🚗 いろは坂とは？</div>
+        <div class="detail-item">日光から中禅寺湖まで約10km・約15分</div>
+        <div class="detail-item">標高差 約400m！48のヘアピンカーブ</div>
+        <div class="detail-item">上り：第二いろは坂（20カーブ）を通行</div>
+        <div class="detail-item">紅葉シーズン外なら比較的すいている</div>
+    </div>
+    <div class="restaurant-card">
+        <div class="restaurant-name">途中の寄り道：明智平 展望台</div>
+        <div class="restaurant-note">いろは坂の途中にある展望台。中禅寺湖や男体山を一望できる！時間があれば立ち寄り◎（ロープウェイあり）</div>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=明智平+日光" target="_blank">マップ</a>
+    </div>
+    <div class="warning-box">車酔いしやすい人は酔い止め薬を<strong>出発30分前</strong>に！シートを前寄りにして前方を見ると楽になる。窓を少し開けるのもおすすめ</div>
+</div>
+
+<!-- 9: 華厳の滝 -->
+<div class="slide" style="background: linear-gradient(135deg, #87CEEB30, #87CEEB60);">
+    <span class="slide-number">9 / 17</span>
+    <h2>華厳の滝 💧</h2>
+    <div class="time-badge">14:50〜15:30（約40分）</div>
+    <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=華厳滝エレベーター" target="_blank">Googleマップ</a>
+    <div class="info-grid" style="margin-top:12px;">
+        <div class="info-label">エレベーター</div><div class="info-value">大人 570円（往復）/ 子供 340円</div>
+        <div class="info-label">営業時間</div><div class="info-value">8:00〜17:00（3〜11月）</div>
+        <div class="info-label">落差</div><div class="info-value">97m！日本三名瀑のひとつ</div>
+        <div class="info-label">駐車場</div><div class="info-value">エレベーター前 無料〜有料</div>
+    </div>
+    <div class="restaurant-card recommended">
+        <div class="restaurant-name">地下100mの観瀑台へ！</div>
+        <div class="restaurant-note">エレベーターで地下100mに降りると滝を正面から見られる！水しぶきとゴォーッという轟音が圧巻。地上の無料展望台からも見えるけど、<strong>エレベーターで行く価値あり！</strong></div>
+    </div>
+    <div class="warning-box">観瀑台は水しぶきが飛んでくることがある。スマホ・カメラの管理に注意！</div>
+</div>
+
+<!-- 10: 中禅寺湖 -->
+<div class="slide" style="background: linear-gradient(135deg, #98FB9830, #98FB9860);">
+    <span class="slide-number">10 / 17</span>
+    <h2>中禅寺湖 🏞️</h2>
+    <div class="time-badge">15:30〜15:50（湖沿い散歩）</div>
+    <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=中禅寺湖" target="_blank">Googleマップ</a>
+    <div class="info-grid" style="margin-top:12px;">
+        <div class="info-label">入場料</div><div class="info-value">無料！</div>
+        <div class="info-label">標高</div><div class="info-value">1,269m（関東最大の高地湖）</div>
+        <div class="info-label">アクセス</div><div class="info-value">華厳の滝から徒歩2〜3分</div>
+        <div class="info-label">駐車場</div><div class="info-value">華厳の滝駐車場を続けて利用</div>
+    </div>
+    <div class="restaurant-card recommended">
+        <div class="restaurant-name">男体山をバックに絶景散歩</div>
+        <div class="restaurant-note">湖岸を少し歩くだけで絶景ポイントがたくさん！山の空気と広い湖面が最高のリフレッシュ。写真映えスポット多数。天気が良ければ男体山も鮮明に見える！</div>
+    </div>
+    <div class="warning-box">16:00出発厳守！宇都宮での夕食・ポケふた時間を確保しよう</div>
+</div>
+
+<!-- 11: 宇都宮へ移動 -->
+<div class="slide" style="background: linear-gradient(135deg, #FFB6C130, #FFB6C160);">
+    <span class="slide-number">11 / 17</span>
+    <h2>🚗 宇都宮へ！</h2>
+    <div class="car-box">
+        <div class="car-name">🚗 中禅寺湖 → 宇都宮</div>
+        <div class="train-route">16:00出発 → 17:00頃着（約45〜60分）</div>
+        <div class="detail-item">いろは坂を下る → 日光市街 → 国道119号線</div>
+        <div class="detail-item">宇都宮市内のレンタカー返却先 or 駐車場へ</div>
+        <div class="detail-item">渋滞なければ余裕で17時着！</div>
+    </div>
+    <div class="car-box">
+        <div class="car-name">🅿️ 宇都宮での行動</div>
+        <div class="detail-item">レンタカー返却後は徒歩で観光エリアへ</div>
+        <div class="detail-item">JR宇都宮駅周辺に駐車場・返却場所多数</div>
+    </div>
+    <div class="warning-box">夕方の日光市街は少し混雑する場合あり。早めの出発が◎</div>
+    <a class="map-link" href="https://www.google.com/maps/dir/中禅寺湖/宇都宮駅" target="_blank">ルート確認</a>
+</div>
+
+<!-- 12: ポケふた -->
+<div class="slide" style="background: linear-gradient(135deg, #E6E6FA30, #E6E6FA60);">
+    <span class="slide-number">12 / 17</span>
+    <h2>ポケふた巡り 🐾</h2>
+    <div class="time-badge">17:00〜 宇都宮のポケモンマンホール</div>
+    <div class="pokefuta-card recommended">
+        <div class="restaurant-name">エレブー＆ホシガリス<span class="rec-badge">おすすめ</span></div>
+        <div class="restaurant-note">📍 宇都宮市駅東公園（元今泉5丁目10-1）</div>
+        <div class="restaurant-note">JR宇都宮駅 東口 → LRT「駅東公園前」停留場 → 徒歩3分</div>
+        <div class="restaurant-note">LRT（ライトライン）: 約150円、約8分</div>
+        <div class="restaurant-note">プールの入口付近に設置！イチョウ並木が綺麗</div>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=宇都宮市駅東公園+ポケふた" target="_blank">マップ</a>
+    </div>
+    <div class="pokefuta-card">
+        <div class="restaurant-name">ボルトロス（時間があれば）</div>
+        <div class="restaurant-note">📍 八幡山公園 アドベンチャーU ゴーカート乗り場前</div>
+        <div class="restaurant-note">東武宇都宮駅から徒歩約15分 or バス約10分</div>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=八幡山公園+宇都宮" target="_blank">マップ</a>
+    </div>
+    <div class="warning-box">エレブー＆ホシガリスだけならLRTで往復20分！餃子の前にサクッと行けるよ</div>
+</div>
+
+<!-- 13: 宇都宮餃子 -->
+<div class="slide" style="background: linear-gradient(135deg, #FFE4B530, #FFE4B560);">
+    <span class="slide-number">13 / 17</span>
+    <h2>宇都宮餃子 🥟</h2>
+    <div class="time-badge">17:30〜 夜の餃子タイム！</div>
     <div class="restaurant-card recommended">
         <div class="restaurant-name">宇都宮みんみん 本店<span class="rec-badge">おすすめ</span></div>
-        <div class="restaurant-price">焼 380円 / 水 380円 / 揚 380円 / ライス 220円</div>
-        <div class="restaurant-note">営業: 11:00〜20:30 / 定休: 火曜<br>注文のコツ: <strong>「焼き＋水＋ライス」</strong>が定番！通は<strong>「ダブル・スイ・ライス」</strong><br>土日は120〜150分待ちも。受付機で番号取って散策しよう</div>
+        <div class="restaurant-price">焼餃子 380円 / 水餃子 380円 / ライス 220円</div>
+        <div class="restaurant-note">昭和33年創業 / 営業: 11:00〜20:30 / 火曜定休</div>
         <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=宇都宮みんみん+本店" target="_blank">マップ</a>
     </div>
     <div class="restaurant-card">
         <div class="restaurant-name">正嗣（まさし）宮島本店</div>
-        <div class="restaurant-price">焼餃子 280円 / 水餃子 280円 ※餃子以外なし！</div>
-        <div class="restaurant-note">営業: 平日 11:30〜14:30 / 土日 11:30〜17:00 / 定休: 火水<br>食べログ「Tabelog 100」選出の実力店</div>
+        <div class="restaurant-price">焼餃子 280円 / 水餃子 280円（餃子のみ！）</div>
+        <div class="restaurant-note">土日 11:30〜17:00 / 火水定休 ※17時前に！</div>
         <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=正嗣+宮島本店+宇都宮" target="_blank">マップ</a>
     </div>
     <div class="restaurant-card">
         <div class="restaurant-name">来らっせ 本店</div>
-        <div class="restaurant-price">常設5店舗＋日替わり約30種の食べ比べ</div>
-        <div class="restaurant-note">営業: 平日 11:00〜20:30 / 土日祝 〜21:00 / MEGAドンキ地下<br>EPARKで受付 → LINEで順番通知が便利！</div>
+        <div class="restaurant-price">30店舗以上の食べ比べ！</div>
+        <div class="restaurant-note">MEGAドンキ地下 / 土日祝 11:00〜21:00</div>
         <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=来らっせ+本店+宇都宮" target="_blank">マップ</a>
     </div>
     <div class="restaurant-card">
         <div class="restaurant-name">みんみん ステーションバル（駅ナカ）</div>
-        <div class="restaurant-price">焼 380円 / 水 380円（本店と同じメニュー）</div>
-        <div class="restaurant-note">JR宇都宮駅ビル3F / 営業: 11:00〜20:30 / 定休: 火曜<br><strong>本店の行列を避けたいならここ！</strong>帰りの新幹線前にも便利</div>
+        <div class="restaurant-price">本店と同じメニュー・料金</div>
+        <div class="restaurant-note">JR宇都宮駅ビル3F / 行列を避けたいならここ！</div>
         <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=宇都宮みんみん+ステーションバル" target="_blank">マップ</a>
     </div>
 </div>
 
-<div class="slide" style="background: linear-gradient(135deg, #87CEEB30, #87CEEB60);">
-    <span class="slide-number">15 / 18</span>
-    <h2>宇都宮ぶらり散策</h2>
-    <div class="time-badge">餃子の街を楽しもう！</div>
-    <div class="restaurant-card">
-        <div class="restaurant-name">宇都宮LRT「ライトライン」</div>
-        <div class="restaurant-note">2023年開業の<strong>日本で75年ぶりの新路面電車</strong>！近未来デザインがカッコいい。ポケふたにも使えるよ。初乗り150円〜</div>
-        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=宇都宮+ライトライン+LRT" target="_blank">マップ</a>
-    </div>
-    <div class="restaurant-card">
-        <div class="restaurant-name">JR宇都宮駅 → 東武宇都宮駅</div>
-        <div class="restaurant-note">約1.5km離れた別の駅！<strong>徒歩約20分</strong>またはバス約5〜10分</div>
-        <div class="restaurant-note">みんみん本店・正嗣・オリオン通りは<strong>東武側が近い</strong>。街歩きしながら歩くのがおすすめ</div>
-        <a class="map-link" href="https://www.google.com/maps/dir/JR宇都宮駅/東武宇都宮駅" target="_blank">ルート検索</a>
-    </div>
-    <div class="restaurant-card">
-        <div class="restaurant-name">餃子像 & 餃子通り</div>
-        <div class="restaurant-note">JR宇都宮駅西口の<strong>大谷石製の餃子像</strong>は記念撮影の定番！餃子通りには餃子モチーフの街灯やマンホールも</div>
-        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=宇都宮+餃子像" target="_blank">マップ</a>
-    </div>
-    <div class="restaurant-card">
-        <div class="restaurant-name">オリオン通り商店街</div>
-        <div class="restaurant-note">東武宇都宮駅前のアーケード。約100店舗が並ぶ。カフェ・土産物・屋内横丁「夜市横丁」も！</div>
-        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=宇都宮+オリオン通り" target="_blank">マップ</a>
-    </div>
-    <div class="restaurant-card">
-        <div class="restaurant-name">宇都宮二荒山神社</div>
-        <div class="restaurant-note">約1,600年の歴史。<strong>「しあわせ餃子おみくじ」</strong>がユニーク！駅から徒歩圏内</div>
-        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=宇都宮二荒山神社" target="_blank">マップ</a>
-    </div>
-</div>
-
-
-<div class="slide" style="background: linear-gradient(135deg, #E6E6FA30, #E6E6FA60);">
-    <span class="slide-number">16 / 18</span>
-    <h2>ポケふたへの行き方</h2>
-    <div class="time-badge">17:00〜17:30 宇都宮駅から</div>
-    <div class="restaurant-card recommended">
-        <div class="restaurant-name">エレブー＆ホシガリス<span class="rec-badge">おすすめ</span></div>
-        <div class="restaurant-note"><strong>JR宇都宮駅</strong>から行く方法:</div>
-        <div class="restaurant-note">1. JR宇都宮駅の<strong>東口</strong>に出る</div>
-        <div class="restaurant-note">2. LRT（ライトライン）に乗車（<strong>土曜は12分間隔</strong>）</div>
-        <div class="restaurant-note">3. <strong>「駅東公園前」停留場</strong>で下車（約5分）</div>
-        <div class="restaurant-note">4. 降りて<strong>徒歩3分</strong>で駅東公園に到着！</div>
-        <div class="restaurant-note">5. プール入口付近にポケふたあり！</div>
-        <div class="restaurant-price">LRT運賃: 150円 / 所要時間: 約8分</div>
-        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=宇都宮駅東公園+ポケふた" target="_blank">マップ</a>
-        <a class="map-link" href="https://www.google.com/maps/dir/宇都宮駅/宇都宮市駅東公園" target="_blank">ルート検索</a>
-    </div>
-    <div class="restaurant-card">
-        <div class="restaurant-name">ボルトロス（時間があれば）</div>
-        <div class="restaurant-note"><strong>JR宇都宮駅</strong>西口バスターミナルから:</div>
-        <div class="restaurant-note">関東バス「八幡山公園」方面行き → <strong>約10分</strong></div>
-        <div class="restaurant-note">八幡山公園 アドベンチャーU（ゴーカート乗り場前）</div>
-        <div class="restaurant-note"><strong>東武宇都宮駅からも近い！</strong>徒歩約15分 or 徒歩15分</div>
-        <div class="restaurant-price">バス運賃: 約200円 / 往復で約30分必要</div>
-        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=八幡山公園+アドベンチャーU+宇都宮" target="_blank">マップ</a>
-        <a class="map-link" href="https://www.google.com/maps/dir/宇都宮駅/八幡山公園" target="_blank">ルート検索</a>
-    </div>
-    <div class="warning-box">エレブー＆ホシガリスだけなら往復20分くらい！餃子の前にサクッと行けるよ</div>
-</div>
-
-
-<div class="slide" style="background: linear-gradient(135deg, #FFE4B530, #FFE4B560);">
-    <span class="slide-number">17 / 18</span>
-    <h2>宇都宮おすすめ散策ルート</h2>
-    <div class="time-badge">16:45〜19:00 効率よく回ろう！</div>
-    <div class="route-timeline">
-        <div class="route-item"><span class="route-time">16:45</span><span class="route-place">JR宇都宮駅 着</span><span class="route-note">東口へ</span></div>
-        <div class="route-item"><span class="route-time">17:00</span><span class="route-place">LRTでポケふた1へ</span><span class="route-note">12分間隔</span></div>
-        <div class="route-item"><span class="route-time">17:10</span><span class="route-place">駅東公園（エレブー）</span><span class="route-note">写真撮ろう！</span></div>
-        <div class="route-item"><span class="route-time">17:20</span><span class="route-place">LRTで駅に戻る</span></div>
-        <div class="route-item"><span class="route-time">17:30</span><span class="route-place">東武方面へ歩く→八幡山公園</span><span class="route-note">徒歩15分</span></div>
-        <div class="route-item"><span class="route-time">17:40</span><span class="route-place">八幡山公園（ボルトロス）</span><span class="route-note">写真撮ろう！</span></div>
-        <div class="route-item"><span class="route-time">17:55</span><span class="route-place">徒歩で東武エリアへ</span><span class="route-note">南へ15分</span></div>
-        <div class="route-item"><span class="route-time">18:10</span><span class="route-place">餃子タイム！</span><span class="route-note">みんみん等</span></div>
-        <div class="route-item"><span class="route-time">18:50</span><span class="route-place">JR宇都宮駅へ戻る</span><span class="route-note">徒歩20分</span></div>
-        <div class="route-item"><span class="route-time">19:00</span><span class="route-place">新幹線で東京へ</span><span class="route-note">約50分</span></div>
-    </div>
-    <div class="warning-box">混んでたら駅ナカの「みんみんステーションバル」（駅ビル3F）も使える</div>
-    <div class="warning-box">バスは本数少なめ。Googleマップで「八幡山公園」検索→経路でリアルタイム確認！！</div>
-</div>
-
-
+<!-- 14: 宇都宮餃子 攻略ガイド -->
 <div class="slide" style="background: linear-gradient(135deg, #FFB6C130, #FFB6C160);">
-    <span class="slide-number">18 / 18</span>
+    <span class="slide-number">14 / 17</span>
+    <h2>宇都宮餃子 攻略ガイド</h2>
+    <div class="restaurant-card recommended">
+        <div class="restaurant-name">みんみん 注文のコツ</div>
+        <div class="restaurant-note"><strong>「焼き＋水＋ライス」</strong>が定番！通は<strong>「ダブル・スイ・ライス」</strong>（焼き2皿＋水餃子＋ライス）で〆るのが流儀。<br>土日は待ち時間あり → 受付機で番号取って近くを散策しよう</div>
+    </div>
+    <div class="restaurant-card">
+        <div class="restaurant-name">正嗣のルール</div>
+        <div class="restaurant-note">餃子しか頼めない。ライスも飲み物もない。でもそれがいい！<strong>シンプルに餃子と向き合う</strong>硬派な名店。土日は17時閉店なので早めに入れると◎</div>
+    </div>
+    <div class="restaurant-card">
+        <div class="restaurant-name">宇都宮散策もセットで！</div>
+        <div class="restaurant-note">JR宇都宮駅西口の<strong>大谷石製の餃子像</strong>は記念撮影スポット！<strong>オリオン通り商店街</strong>でぶらり歩き。<strong>宇都宮二荒山神社</strong>の「しあわせ餃子おみくじ」もユニーク！</div>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=宇都宮+餃子像" target="_blank">餃子像</a>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=宇都宮二荒山神社" target="_blank">二荒山神社</a>
+    </div>
+</div>
+
+<!-- 15: 宇都宮 夜散歩ルート -->
+<div class="slide" style="background: linear-gradient(135deg, #87CEEB30, #87CEEB60);">
+    <span class="slide-number">15 / 17</span>
+    <h2>宇都宮 夜散歩ルート</h2>
+    <div class="time-badge">17:00〜19:00 効率よく！</div>
+    <div class="route-timeline">
+        <div class="route-item"><span class="route-time">17:00</span><span class="route-place">JR宇都宮駅 着</span><span class="route-note">東口へ</span></div>
+        <div class="route-item"><span class="route-time">17:05</span><span class="route-place">LRTでポケふたへ</span><span class="route-note">駅東公園前</span></div>
+        <div class="route-item"><span class="route-time">17:15</span><span class="route-place">📸 エレブー&ホシガリス</span><span class="route-note">写真！</span></div>
+        <div class="route-item"><span class="route-time">17:25</span><span class="route-place">LRTで駅に戻る</span><span class="route-note"></span></div>
+        <div class="route-item"><span class="route-time">17:35</span><span class="route-place">西口 餃子像 📸</span><span class="route-note">記念撮影</span></div>
+        <div class="route-item"><span class="route-time">17:50</span><span class="route-place">🥟 餃子タイム！</span><span class="route-note">みんみん等</span></div>
+        <div class="route-item"><span class="route-time">18:40</span><span class="route-place">オリオン通り / 二荒山神社</span><span class="route-note">余裕あれば</span></div>
+    </div>
+    <div class="warning-box">混んでたら駅ナカ「みんみんステーションバル」（JR駅ビル3F）も使える！帰りの電車前にも便利</div>
+</div>
+
+<!-- 16: 持ち物＆費用 -->
+<div class="slide" style="background: linear-gradient(135deg, #98FB9830, #98FB9860);">
+    <span class="slide-number">16 / 17</span>
+    <h2>持ち物＆費用まとめ</h2>
+    <span class="section-label">持ち物リスト</span>
+    <div class="packing-grid">
+        <div class="packing-item">運転免許証</div>
+        <div class="packing-item">スマホ＆充電器</div>
+        <div class="packing-item">現金（多め）</div>
+        <div class="packing-item">交通系ICカード</div>
+        <div class="packing-item">酔い止め薬</div>
+        <div class="packing-item">折りたたみ傘</div>
+        <div class="packing-item">歩きやすい靴</div>
+        <div class="packing-item">上着（日光は涼しい）</div>
+        <div class="packing-item">カメラ</div>
+        <div class="packing-item">ハンカチ＆ティッシュ</div>
+    </div>
+    <span class="section-label" style="margin-top:16px;">拝観料まとめ（大人/人）</span>
+    <table class="cost-table">
+        <tr><td>日光東照宮</td><td>1,600円</td></tr>
+        <tr><td>神橋（渡橋する場合）</td><td>300円</td></tr>
+        <tr><td>華厳の滝エレベーター</td><td>570円</td></tr>
+        <tr><td>中禅寺湖</td><td>無料</td></tr>
+        <tr><td>LRT（宇都宮）</td><td>150〜200円</td></tr>
+        <tr><td>宇都宮餃子（目安）</td><td>〜1,500円</td></tr>
+    </table>
+    <div class="total-box">拝観料合計 約2,500円〜 ＋ レンタカー・ガソリン・駐車場</div>
+</div>
+
+<!-- 17: お役立ちTips -->
+<div class="slide" style="background: linear-gradient(135deg, #FFE4B530, #FFE4B560);">
+    <span class="slide-number">17 / 17</span>
     <h2>お役立ちTips</h2>
     <div class="time-badge">知っておくと安心！</div>
     <div class="restaurant-card">
-        <div class="restaurant-name">日光は東京より寒い！</div>
-        <div class="restaurant-note">標高が高くて<strong>5〜10度低い</strong>。4月でも肌寒いから<strong>上着必須</strong>。山の天気は変わりやすいので折りたたみ傘も忘れずに</div>
+        <div class="restaurant-name">🚗 いろは坂の攻略法</div>
+        <div class="restaurant-note">48カーブのクネクネ道。<strong>酔い止めは出発30分前</strong>に飲もう。シートを前に出してなるべく前方を見ると楽。カーブ手前は焦らずゆっくりでOK</div>
     </div>
     <div class="restaurant-card">
-        <div class="restaurant-name">現金を多めに持っていこう</div>
-        <div class="restaurant-note">日光の小さいお店や餃子屋は<strong>現金のみ</strong>が多い。<strong>5,000円くらい現金</strong>があると安心</div>
+        <div class="restaurant-name">日光は東京より5〜10度低い</div>
+        <div class="restaurant-note">中禅寺湖周辺（標高1,269m）は特に涼しい。<strong>上着必須！</strong>滝の観瀑台も水しぶきで体が冷える</div>
     </div>
     <div class="restaurant-card">
-        <div class="restaurant-name">コインロッカー</div>
-        <div class="restaurant-note">東武日光駅・JR宇都宮駅にあり。大きい荷物は預けて身軽に回ろう</div>
-    </div>
-    <div class="restaurant-card">
-        <div class="restaurant-name">4月の日光は桜が残ってるかも！</div>
-        <div class="restaurant-note">東京より遅咲き。新緑も綺麗な時期。カメラの充電も忘れずに</div>
+        <div class="restaurant-name">現金を多めに用意</div>
+        <div class="restaurant-note">神橋・東照宮・餃子屋（正嗣など）は現金のみが多い。<strong>5,000〜10,000円</strong>は用意しておこう</div>
     </div>
     <div class="restaurant-card">
         <div class="restaurant-name">Googleマップのオフライン地図</div>
-        <div class="restaurant-note">事前に日光・宇都宮エリアの地図をダウンロードしておくと<strong>電波が悪くても安心</strong></div>
+        <div class="restaurant-note">いろは坂周辺は電波が弱い場所も。事前に日光〜宇都宮エリアをダウンロードしておくと安心</div>
+    </div>
+    <div class="restaurant-card">
+        <div class="restaurant-name">帰りはJR宇都宮駅から</div>
+        <div class="restaurant-note">東北新幹線（やまびこ/なすの）で東京まで約50分。自由席4,490円。帰りの時間に合わせて宇都宮の食事時間を調整しよう</div>
     </div>
 </div>
 

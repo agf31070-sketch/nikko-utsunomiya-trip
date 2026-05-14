@@ -3,27 +3,112 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>日光・宇都宮 ぶらり旅 🚆</title>
+<title>日光・宇都宮 レンタカー旅のしおり</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap');
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Zen Maru Gothic',sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#FFF0F5,#F0F8FF,#FFF8DC);padding:20px;}
-.container{max-width:400px;width:100%;text-align:center;}
-h1{font-size:1.8rem;color:#D4607A;margin-bottom:8px;}
-.date{color:#5B9BD5;font-size:1rem;margin-bottom:32px;}
-.btn{display:block;width:100%;padding:20px;margin:12px 0;border-radius:16px;text-decoration:none;font-size:1.1rem;font-weight:700;transition:transform 0.2s,box-shadow 0.2s;}
-.btn:active{transform:scale(0.98);}
-.btn-kawaii{background:linear-gradient(135deg,#FFB6C1,#FF69B4);color:#fff;box-shadow:0 4px 16px rgba(255,105,180,0.3);}
-.btn-simple{background:linear-gradient(135deg,#1E2761,#2C3E8C);color:#C9A96E;box-shadow:0 4px 16px rgba(30,39,97,0.3);}
-.btn span{display:block;font-size:0.8rem;font-weight:400;margin-top:4px;opacity:0.8;}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Zen+Maru+Gothic:wght@700;900&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: #1E2761;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+.container {
+    max-width: 520px;
+    width: 100%;
+    text-align: center;
+}
+.title {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    color: #FAF8F5;
+    font-size: 1.8rem;
+    font-weight: 900;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+.subtitle {
+    color: #C9A96E;
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 8px;
+}
+.tagline {
+    color: #FAF8F5;
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin-bottom: 40px;
+}
+.gold-line { width: 40px; height: 2px; background: #C9A96E; margin: 16px auto 32px; }
+.card {
+    display: block;
+    text-decoration: none;
+    border-radius: 16px;
+    padding: 28px 24px;
+    margin: 16px 0;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+.card-kawaii {
+    background: linear-gradient(135deg, #FFB6C1, #87CEEB);
+}
+.card-simple {
+    background: #FAF8F5;
+    border: 2px solid #C9A96E;
+}
+.card-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 8px;
+    opacity: 0.8;
+}
+.card-kawaii .card-label { color: #D4607A; }
+.card-simple .card-label { color: #C9A96E; }
+.card-title {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin-bottom: 6px;
+}
+.card-kawaii .card-title { color: #D4607A; }
+.card-simple .card-title { color: #1E2761; }
+.card-desc {
+    font-size: 0.82rem;
+    opacity: 0.75;
+}
+.card-kawaii .card-desc { color: #4A4A4A; }
+.card-simple .card-desc { color: #5A5A5A; }
+.footer {
+    color: #FAF8F5;
+    font-size: 0.75rem;
+    opacity: 0.4;
+    margin-top: 32px;
+}
 </style>
 </head>
 <body>
 <div class="container">
-<h1>日光・宇都宮 ぶらり旅</h1>
-<p class="date">2026.4.11 SAT</p>
-<a class="btn btn-kawaii" href="shiori_kawaii.html">かわいい版で見る<span>パステルカラー</span></a>
-<a class="btn btn-simple" href="shiori_simple.html">おしゃれ版で見る<span>ネイビー × ゴールド</span></a>
+    <div class="subtitle">TRAVEL GUIDE</div>
+    <div class="title">日光・宇都宮<br>レンタカー旅</div>
+    <div class="gold-line"></div>
+    <div class="tagline">⛩️ 歴史 → 🚗 いろは坂 → 💧 滝 → 🏞️ 湖 → 🥟 餃子</div>
+
+    <a class="card card-kawaii" href="shiori_kawaii.html">
+        <div class="card-label">KAWAII VERSION</div>
+        <div class="card-title">🌸 かわいい系</div>
+        <div class="card-desc">パステルカラー × 丸ゴシック<br>ポップでかわいいデザイン</div>
+    </a>
+
+    <a class="card card-simple" href="shiori_simple.html">
+        <div class="card-label">ELEGANT VERSION</div>
+        <div class="card-title">✦ おしゃれ系</div>
+        <div class="card-desc">ネイビー × ゴールド<br>シンプルで大人なデザイン</div>
+    </a>
+
+    <div class="footer">東武日光 12:21着 〜 宇都宮 夜ごはん</div>
 </div>
 </body>
 </html>
